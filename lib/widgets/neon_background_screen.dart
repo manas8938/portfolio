@@ -7,9 +7,9 @@ class NeonBackgroundScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black, // Solid black background
+      color: Colors.black,
       child: Scaffold(
-        backgroundColor: Colors.transparent, // So black shows through
+        backgroundColor: Colors.transparent,
         body: child,
       ),
     );

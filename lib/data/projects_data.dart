@@ -9,12 +9,18 @@ final List<Project> myProjects = [
     repoUrl: 'https://github.com/manas8938/smart-delivery',
   ),
   Project(
-    title: 'Pet Store App',
-    description: 'A Full-Stack mobile App for a pet adoption and shopping platform. Users can browse pet profiles and view supplies. This project focuses on intuitive UX and clean Flutter UI design.',
-    imagePath: 'assets/images/pet.jpeg',
-    techStack: ['Flutter', 'Figma','Docker', 'NestJS', 'MySQL', 'Swagger', 'REST API'],
-    repoUrl: 'https://github.com/manas8938/smart-delivery',
+    title: 'CodeAlpha — Fitness Tracker (Internship)',
+    description: 'Fitness Tracker app built during an internship. Tracks workouts, steps, calories, and sleep; includes workout plans, progress charts, local storage, user authentication, and exportable reports. Built with clean architecture for easy expansion and integration.',
+    imagePath: 'assets/images/fitnessTrackerApp.jpg',
+    techStack: [
+      'Flutter',
+      'Dart',
+      'Firebase',
+      'Figma',
+    ],
+    repoUrl: 'https://github.com/manas8938/CodeAlpha_FitnessTracker',
   ),
+
   Project(
     title: 'Food Delivery App',
     description: 'A frontend prototype of a food delivery app showcasing restaurant listings, menu browsing, and modern UI elements using Flutter and Figma.',
