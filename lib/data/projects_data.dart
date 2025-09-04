@@ -10,7 +10,7 @@ final List<Project> myProjects = [
   ),
   Project(
     title: 'Fitness Tracker App',
-    description: 'Fitness Tracker app built during an internship. Tracks workouts, steps, calories, and sleep; includes workout plans, progress charts, local storage, user authentication, and exportable reports. Built with clean architecture for easy expansion and integration.',
+    description: 'Fitness Tracker app built using Flutter and firebase,it Tracks workouts, steps, calories, and sleep; includes workout plans, progress charts, local storage, user authentication, and exportable reports. Built with clean architecture for easy expansion and integration.',
     imagePath: 'assets/images/fitnessTrackerApp.jpg',
     techStack: [
       'Flutter',
