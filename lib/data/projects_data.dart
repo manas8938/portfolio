@@ -9,8 +9,8 @@ final List<Project> myProjects = [
     repoUrl: 'https://github.com/manas8938/smart-delivery',
   ),
   Project(
-    title: 'CodeAlpha — Fitness Tracker (Internship)',
-    description: 'Fitness Tracker app built during an internship. Tracks workouts, steps, calories, and sleep; includes workout plans, progress charts, local storage, user authentication, and exportable reports. Built with clean architecture for easy expansion and integration.',
+    title: 'Fitness Tracker App',
+    description: 'Fitness Tracker app built using Flutter and firebase,it Tracks workouts, steps, calories, and sleep; includes workout plans, progress charts, local storage, user authentication, and exportable reports. Built with clean architecture for easy expansion and integration.',
     imagePath: 'assets/images/fitnessTrackerApp.jpg',
     techStack: [
       'Flutter',
