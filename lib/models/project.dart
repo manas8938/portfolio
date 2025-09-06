@@ -3,7 +3,7 @@ class Project {
   final String description;
   final String imagePath;
   final List<String> techStack;
-  final String repoUrl;        // GitHub or live demo
+  final String repoUrl;
 
   Project({
     required this.title,

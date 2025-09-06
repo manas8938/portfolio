@@ -27,7 +27,7 @@ class ContactScreen extends StatelessWidget {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width < 600 ? 280 : 300,
                     height: 400,
-                    child: ContactCard()
+                    child: const ContactCard()
                         .animate()
                         .fadeIn(duration: 500.ms)
                         .moveX(begin: -30, end: 0, duration: 500.ms),
@@ -52,8 +52,8 @@ class ContactCard extends StatefulWidget {
 class _ContactCardState extends State<ContactCard> with SingleTickerProviderStateMixin {
   bool _hovering = false;
 
-  final contacts = [
-    ContactItem(FontAwesomeIcons.whatsapp, 'WhatsApp', 'https://wa.me/03029125349'),
+  final contacts = const [
+    ContactItem(FontAwesomeIcons.whatsapp, 'WhatsApp', 'https://wa.me/923029125349'),
     ContactItem(FontAwesomeIcons.github, 'GitHub', 'https://github.com/manas8938'),
     ContactItem(FontAwesomeIcons.instagram, 'Instagram', 'https://instagram.com/_ana7x_/'),
     ContactItem(FontAwesomeIcons.linkedin, 'LinkedIn',
@@ -92,7 +92,8 @@ class _ContactCardState extends State<ContactCard> with SingleTickerProviderStat
       const Color(0xFF8A2BE2),
       const Color(0xFFFF00FF),
     ];
-    final neonGrad = LinearGradient(colors: neonCols, begin: Alignment.topLeft, end: Alignment.bottomRight);
+    final neonGrad =
+    LinearGradient(colors: neonCols, begin: Alignment.topLeft, end: Alignment.bottomRight);
 
     return MouseRegion(
       onEnter: (_) {
@@ -131,7 +132,8 @@ class _ContactCardState extends State<ContactCard> with SingleTickerProviderStat
                     children: [
                       FadeInText(
                         child: ShaderMask(
-                          shaderCallback: (b) => neonGrad.createShader(Rect.fromLTWH(0, 0, b.width, b.height)),
+                          shaderCallback: (b) =>
+                              neonGrad.createShader(Rect.fromLTWH(0, 0, b.width, b.height)),
                           blendMode: BlendMode.srcIn,
                           child: Text(
                             'Connect with Me',
@@ -268,6 +270,15 @@ class _AnimatedContactButtonState extends State<AnimatedContactButton>
     super.dispose();
   }
 
+  Future<void> _openUrl(String u) async {
+    final url = Uri.parse(u);
+    // Open in new tab on web; external app elsewhere.
+    await launchUrl(
+      url,
+      webOnlyWindowName: '_blank',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -282,10 +293,7 @@ class _AnimatedContactButtonState extends State<AnimatedContactButton>
         );
       },
       child: ElevatedButton(
-        onPressed: () async {
-          final url = Uri.parse(widget.contact.url);
-          if (await canLaunchUrl(url)) await launchUrl(url);
-        },
+        onPressed: () => _openUrl(widget.contact.url),
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
